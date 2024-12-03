@@ -9,7 +9,15 @@ const SearchBar: React.FC<SearchBarProps> = ({ value, onChange }) => (
     placeholder="Search for a character..."
     value={value}
     onChange={(e) => onChange(e.target.value)}
-    style={{ padding: "8px", width: "100%", marginBottom: "16px" }}
+    style={{
+      padding: "8px",
+      width: "100%",
+      marginBottom: "16px",
+      borderRadius: "8px",
+      border: "2px solid yellow",
+      outline: "none",
+      fontSize: "16px",
+    }}
   />
 );
 

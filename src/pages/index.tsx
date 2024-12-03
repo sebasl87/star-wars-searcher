@@ -21,12 +21,14 @@ export default function Home() {
   const handleNextPage = () => {
     if (data?.next) {
       setPage((prev) => prev + 1);
+      setSelectedCharacter(null);
     }
   };
 
   const handlePreviousPage = () => {
     if (data?.previous && page > 1) {
       setPage((prev) => prev - 1);
+      setSelectedCharacter(null);
     }
   };
 
@@ -36,7 +38,18 @@ export default function Home() {
         <p style={styles.message}>Start typing to search for characters...</p>
       );
     if (isLoading || isFetching)
-      return <p style={styles.message}>Loading...</p>;
+      return (
+        <div
+          style={{
+            display: "flex",
+            width: "100%",
+            justifyContent: "center",
+            marginTop: "24px",
+          }}
+        >
+          <div className="loader"></div>
+        </div>
+      );
     if (error)
       return <p style={styles.error}>Error fetching data: {error.message}</p>;
     if (data?.results.length === 0)

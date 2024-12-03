@@ -6,11 +6,11 @@ export const styles = {
     textAlign: "center" as const,
   },
   logoContainer: {
-    marginBottom: "16px",
+    marginBottom: "40px",
   },
   message: {
     fontSize: "18px",
-    color: "#333",
+    color: "yellow",
     margin: "16px 0",
   },
   error: {

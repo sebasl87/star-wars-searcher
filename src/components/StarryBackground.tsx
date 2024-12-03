@@ -18,7 +18,7 @@ const StarryBackground = () => {
       for (let i = 0; i < count; i++) {
         const x = Math.random() * width;
         const y = Math.random() * height;
-        const radius = Math.random() * 2; // Tamaño de las estrellas
+        const radius = Math.random() * 2;
         ctx.beginPath();
         ctx.arc(x, y, radius, 0, 2 * Math.PI);
         ctx.fillStyle = "yellow";
@@ -40,7 +40,7 @@ const StarryBackground = () => {
         left: 0,
         width: "100%",
         height: "100%",
-        zIndex: -1, // Asegúrate de que quede detrás del contenido
+        zIndex: -1,
         backgroundColor: "black",
       }}
     ></canvas>

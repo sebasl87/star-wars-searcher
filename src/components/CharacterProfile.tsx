@@ -1,4 +1,4 @@
-import { Character } from "../types";
+import { Character } from "@/types";
 
 interface CharacterProfileProps {
   character: Character;
@@ -27,7 +27,19 @@ const CharacterProfile: React.FC<CharacterProfileProps> = ({
       <p>
         <strong>Gender:</strong> {character.gender}
       </p>
-      <button onClick={onClose}>Close</button>
+      <button
+        onClick={onClose}
+        style={{
+          backgroundColor: "black",
+          color: "yellow",
+          border: "1px solid yellow",
+          padding: "8px 16px",
+          borderRadius: "4px",
+          cursor: "pointer",
+        }}
+      >
+        Close
+      </button>
     </div>
   </div>
 );
