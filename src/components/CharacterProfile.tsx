@@ -9,15 +9,26 @@ const CharacterProfile: React.FC<CharacterProfileProps> = ({
   character,
   onClose,
 }) => (
-  <div style={{ border: "1px solid #ddd", padding: "16px", marginTop: "16px" }}>
-    <h2>{character.name}</h2>
-    <p>
-      <strong>Birth Year:</strong> {character.birth_year}
-    </p>
-    <p>
-      <strong>Gender:</strong> {character.gender}
-    </p>
-    <button onClick={onClose}>Close</button>
+  <div style={{ display: "flex", width: "100%", justifyContent: "center" }}>
+    <div
+      style={{
+        border: "1px solid yellow",
+        padding: "16px",
+        marginTop: "16px",
+        borderRadius: "8px",
+        width: "560px",
+        marginLeft: "40px",
+      }}
+    >
+      <h2 style={{ color: "yellow" }}>{character.name}</h2>
+      <p>
+        <strong>Birth Year:</strong> {character.birth_year}
+      </p>
+      <p>
+        <strong>Gender:</strong> {character.gender}
+      </p>
+      <button onClick={onClose}>Close</button>
+    </div>
   </div>
 );
 

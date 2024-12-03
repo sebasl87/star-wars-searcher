@@ -16,8 +16,9 @@ const CharacterList: React.FC<CharacterListProps> = ({
         onClick={() => onCharacterClick(character)}
         style={{
           cursor: "pointer",
-          padding: "8px",
-          borderBottom: "1px solid #ddd",
+          padding: "16px",
+          borderBottom: "1px solid yellow",
+          listStyle: "none",
         }}
       >
         <strong>{character.name}</strong> - {character.birth_year}

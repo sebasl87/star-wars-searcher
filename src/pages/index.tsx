@@ -70,7 +70,8 @@ export default function Home() {
         value={searchTerm}
         onChange={(value) => {
           setSearchTerm(value);
-          setPage(1); // Resetear a la primera página en cada nueva búsqueda
+          setPage(1);
+          setSelectedCharacter(null);
         }}
       />
       {renderContent()}
