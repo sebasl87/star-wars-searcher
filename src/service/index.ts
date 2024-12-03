@@ -1,14 +1,18 @@
 import { Character } from "@/types";
 
+export interface ApiResponse {
+  count: number;
+  next: string | null;
+  previous: string | null;
+  results: Character[];
+}
+
 export const fetchCharacters = async (
-  searchTerm: string
-): Promise<Character[]> => {
-  const response = await fetch(
-    `https://swapi.dev/api/people/?search=${searchTerm}`
-  );
+  url: string
+): Promise<ApiResponse> => {
+  const response = await fetch(url);
   if (!response.ok) {
     throw new Error("Failed to fetch data");
   }
-  const data = await response.json();
-  return data.results || [];
+  return response.json();
 };
