@@ -21,14 +21,12 @@ export default function Home() {
   const handleNextPage = () => {
     if (data?.next) {
       setPage((prev) => prev + 1);
-      setSelectedCharacter(null);
     }
   };
 
   const handlePreviousPage = () => {
     if (data?.previous && page > 1) {
       setPage((prev) => prev - 1);
-      setSelectedCharacter(null);
     }
   };
 
@@ -84,7 +82,6 @@ export default function Home() {
         onChange={(value) => {
           setSearchTerm(value);
           setPage(1);
-          setSelectedCharacter(null);
         }}
       />
       {renderContent()}
